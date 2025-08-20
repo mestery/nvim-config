@@ -14,7 +14,6 @@ This repository contains my personal Neovim configuration. It's set up with lazy
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) for fuzzy finding
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) for syntax highlighting and code understanding
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) for status line
-- [CodeCompanion](https://github.com/olimorris/codecompanion.nvim) for AI-powered coding assistance
 - [Nord](https://github.com/arcticicestudio/nord-vim) color scheme
 
 ## Installation
