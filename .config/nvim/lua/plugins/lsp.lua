@@ -22,6 +22,38 @@ return {
           capabilities = capabilities,
         })
       end
+
+      -- Setup formatting on save
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.go",
+        callback = function()
+          vim.lsp.buf.format({ async = true })
+        end,
+      })
+
+      -- Format Rust files on save
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.rs",
+        callback = function()
+          vim.lsp.buf.format({ async = true })
+        end,
+      })
+
+      -- Format C/C++ files on save
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.{c,cpp,h,hpp}",
+        callback = function()
+          vim.lsp.buf.format({ async = true })
+        end,
+      })
+
+      -- Format Python files on save
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.py",
+        callback = function()
+          vim.lsp.buf.format({ async = true })
+        end,
+      })
     end,
   }
 }
