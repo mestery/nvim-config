@@ -6,24 +6,18 @@ return {
       "williamboman/mason-lspconfig.nvim",
     },
     config = function()
-      local lspconfig = require("lspconfig")
-      local mason = require("mason")
-      local mason_lspconfig = require("mason-lspconfig")
-
-      mason.setup()
-      mason_lspconfig.setup()
 
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local servers = { "pyright", "gopls", "lua_ls", "rust_analyzer", "clangd", "ccls" }
 
       for _, server in ipairs(servers) do
-        lspconfig[server].setup({
+        vim.lsp.config(server, {
           capabilities = capabilities,
         })
       end
 
-      -- Setup formatting on save
+      -- Setup formatting on save (vim.lsp.config is built-in, no lspconfig needed)
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = "*.go",
         callback = function()
