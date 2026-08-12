@@ -29,3 +29,6 @@ Thumbs.db
 
 # Ignore qwen-coder .env file
 .env
+
+# lazy.nvim lockfile (auto-generated)
+lazy-lock.json
