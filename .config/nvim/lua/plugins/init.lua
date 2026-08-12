@@ -1,5 +1,4 @@
 return {
-  { "folke/tokyonight.nvim" },
   { "arcticicestudio/nord-vim" },
   { "nvim-lua/plenary.nvim" },
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
@@ -9,7 +8,7 @@ return {
   { "williamboman/mason-lspconfig.nvim" },
   { "hrsh7th/nvim-cmp" },
   { "hrsh7th/cmp-nvim-lsp" },
-  { "j-hui/fidget.nvim", tag = "legacy", config = true },
+  { "j-hui/fidget.nvim", config = true },
   { "glepnir/lspsaga.nvim", branch = "main", config = true },
   { "olimorris/codecompanion.nvim" },
   { "nvim-lualine/lualine.nvim" },

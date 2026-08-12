@@ -70,4 +70,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.cmd([[colorscheme nord]])
-vim.cmd([[hi CodeCompanionGhostText guifg=#888888 gui=italic]])
+
